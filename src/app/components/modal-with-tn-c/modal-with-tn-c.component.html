@@ -1,0 +1,36 @@
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">{{header}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-6">
+              <p>First Name</p>
+              <p>{{vijay.firstName}}</p>
+            </div>
+            <div class="col-6">
+              <p>Last Name</p>
+              <p>{{vijay.lastName}}</p>
+            </div>
+            <div class="col-12">
+              <p>Email ID</p>
+              <p>{{vijay.emailID}}</p>
+            </div>
+            <div class="col-12">
+              <p>Message</p>
+              <p>{{vijay.msg}}</p>
+            </div>
+          </div>
+
+<app-checkbox [check]="karan"></app-checkbox>       
+
+{{ karan }}
+
+        </div>
+        <app-buttons (dataSent)="setData($event)"></app-buttons>
+      </div>
+    </div>
+  </div>

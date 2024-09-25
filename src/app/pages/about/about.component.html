@@ -1,0 +1,58 @@
+<div class="container">
+    <h1  class="text-center text-primary" style="margin-top:20; font-size: 50; font-weight: 500; margin-bottom: 20;">
+        About Us
+    </h1>
+    <p style="text-align: justify; font-weight: 600; line-height: 2; letter-spacing: 1px;">
+        Seasecure is an independent freight forwarder established to support intermodal transport of cargo
+        worldwide.
+        We pride ourselves on building long standing relationships with our customers through excellent and
+        personalised customer service.
+        Our services can reach almost any area in the world and run by a team of professional freight experts. We
+        pride ourselves on the understanding and experience we bring.
+        Over the years we have gradually expanded and worked towards a worldwide network of agents and are committed
+        in providing our clients with the highest standards of value added services.
+        With a multi-lingual team - with both academic and professional experience, you can be rest assured your
+        cargo is in the right hands.
+    </p>
+</div>
+
+
+<div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Data</label>
+    <input type="text" class="form-control" id="exampleInputEmail1">
+    <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+  </div>
+
+
+  <img src="https://t4.ftcdn.net/jpg/06/41/42/69/360_F_641426931_sJkCqdIkiI5GPtbBQ92S7xIJk9akRo33.jpg" alt="">
+
+<div class="container">
+    <div class="row" style="margin-top:50px;">
+
+        @for (item of parent; track $index) {
+            <div class="col-md-6 col-12">
+                <h2 [ngClass]="'text-center mb-3 text-primary'"> {{item.name}}</h2>
+    
+                <p class="class1">
+                    {{item.data}}
+                </p>
+                    <ul style="font-weight: 500;">
+                        @for (anand of item.list; track $index) {
+                            <li>{{anand}}</li>
+                        }
+                    </ul>
+            </div>
+        }
+    </div>
+</div>
+
+
+<button (click)="datasdgj()"> Submit </button>
+
+@for (item of [].constructor(8); track $index) {
+    <app-anand [anandVar]="data"></app-anand>
+}
+
+<!-- <button (click)="datasdgj()">clickkkkk</button> -->
+
+<!-- {{data}} -->

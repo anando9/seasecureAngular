@@ -1,0 +1,63 @@
+<div class="container-fluid ">
+    <div class="row bg-primary">
+        <div class="col-0 col-lg-5"> </div>
+        <div class=" col-12 col-lg-7">
+            <div class="row g-0">
+                <div class="col-12 col-lg-6 p-2 pe-0 text-end ">
+                    <i class="bi bi-telephone  fw-bold " style="font-style:normal;  color:white;">
+                        +91-9892448118</i>
+                </div>
+                <div class="col-12 col-lg-6 p-2 pe-2 ps-0 text-end">
+                    <i class="bi bi-alarm fw-bold " style=" font-style:normal; text-align: right; color:white;"> (
+                        Mon-Fri
+                        10am - 6pm ) (
+                        Sat 10am - 1:30pm )</i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container-fluid">
+        <p class="navbar-brand p-0">
+            @if (!kuchBhi.headerChnage) {
+                <img src="../../assets/images/logo1.jpg" alt="logo" width="250" >
+            }@else {
+                <span>
+                    Mahesh Kc
+                </span>
+            }
+        </p>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+                <li class="nav-item px-2">
+                    <p (click)="route('home')" class="nav-link active" aria-current="page">{{'Home'}}</p>
+                </li>
+                <li class="nav-item px-2">
+                    <p class="nav-link" (click)="route('about')">About</p>
+                </li>
+                <li class="nav-item dropdown px-2">
+                    <p class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Services
+                    </p>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        @for (item of option; track $index) {
+                            <li><p class="dropdown-item">{{item | lowercase}}</p></li>
+                        }
+                    </ul>
+                </li>
+                <li class="nav-item px-2 ">
+                    <p class="nav-link" (click)="route('contact')">Contact</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
